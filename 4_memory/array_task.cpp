@@ -26,4 +26,3 @@ int main() {
     }
     assert(a.at(1) == 2);
 }
-

@@ -19,4 +19,5 @@ int main() {
     {
         Int a(5);
     }
+    Int c(20);
 }

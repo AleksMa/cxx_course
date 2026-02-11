@@ -10,7 +10,7 @@ int main() {
     for (int i = 0; i < 3; ++i) {
         std::cout << a[i] << " ";
     }
-    std::cout << "\n";
+    std::cout << "\n" << sizeof(a) << "\n";
 
     delete[] a;
 }
