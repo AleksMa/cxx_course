@@ -1,0 +1,8 @@
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/CMakeFiles/edit_cache.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/CMakeFiles/rebuild_cache.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/lib/CMakeFiles/bmpio.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/lib/CMakeFiles/edit_cache.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/lib/CMakeFiles/rebuild_cache.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/bin/CMakeFiles/app.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/bin/CMakeFiles/edit_cache.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/bin/CMakeFiles/rebuild_cache.dir

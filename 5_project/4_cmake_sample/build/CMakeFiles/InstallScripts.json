@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/cmake_install.cmake",
+		"/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/lib/cmake_install.cmake",
+		"/Users/a-mamaev/Work/cpp_hse/seminars/5_project/4_cmake_sample/build/bin/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

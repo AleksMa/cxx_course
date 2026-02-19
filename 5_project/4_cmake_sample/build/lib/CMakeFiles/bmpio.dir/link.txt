@@ -1,0 +1,2 @@
+/usr/bin/ar qc libbmpio.a CMakeFiles/bmpio.dir/bmp_io.cpp.o
+/usr/bin/ranlib libbmpio.a
