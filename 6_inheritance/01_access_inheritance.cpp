@@ -13,30 +13,34 @@ public:
     void shout(const std::string& msg) const {
         log("!!! " + msg + " !!!");
     }
+    // log
 };
 
-class InternalLogMixin : private Logger {
+class InternalLog : private Logger {
 public:
     void doWork() {
         log("work started");
         log("work finished");
     }
 
-    // using Logger::log;
+    using Logger::log;
 };
 
-static void takesLogger(const Logger& l) {
+void takesLogger(const Logger& l) {
     l.log("hello from takesLogger()");
 }
 
 int main() {
+    Logger l;
+    l.log("hello from main()");
+
     LoudLogger a;
     a.log("public inheritance keeps interface");
     a.shout("louder");
 
     takesLogger(a);
 
-    InternalLogMixin b;
+    InternalLog b;
     b.doWork();
     b.log("we selectively exposed log()");
     // takesLogger(b);

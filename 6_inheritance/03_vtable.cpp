@@ -8,13 +8,13 @@ public:
     virtual void g() const { std::cout << "Base::g\n"; }
 };
 
-class Derived : public Base {
+class Derived final : public Base {
 public:
     void f() const override { std::cout << "Derived::f\n"; }
     void g() const override { std::cout << "Derived::g\n"; }
 };
 
-static void callThroughBase(const Base& b) {
+void callThroughBase(const Base& b) {
     b.f();
     b.g();
 }

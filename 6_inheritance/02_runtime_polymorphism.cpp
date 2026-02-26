@@ -10,7 +10,8 @@ public:
     virtual int apply(int x) const = 0;
 };
 
-class Add : public IOperation {
+class Add : public IOperation
+{
     int delta_;
 public:
     explicit Add(int d) : delta_(d) {}
@@ -28,11 +29,13 @@ public:
 
 int main() {
     std::vector<IOperation*> ops;
-    ops.push_back(new Add(5));
+    Add add(5);
+    ops.push_back(&add);
     ops.push_back(new Multiply(3));
 
+
     int x = 10;
-    for (const auto& op : ops) {
+    for (const IOperation* op : ops) {
         std::cout << op->name() << ": " << x << " -> ";
         x = op->apply(x);
         std::cout << x << "\n";

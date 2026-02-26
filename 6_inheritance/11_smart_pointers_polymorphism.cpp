@@ -3,45 +3,48 @@
 #include <vector>
 #include <string>
 
-struct Task {
-    virtual ~Task() = default;
+class Task {
+public:
+    virtual ~Task() {
+        std::cout << "~Task()\n";
+    }
     virtual void execute() = 0;
 };
 
-struct PrintTask : Task {
+class PrintTask : public Task {
     std::string msg;
+public:
+    virtual ~PrintTask() {
+        std::cout << "~PrintTask()\n";
+    }
     explicit PrintTask(std::string m) : msg(std::move(m)) {}
     void execute() override { std::cout << msg << "\n"; }
 };
 
-struct FakeHandle {
-    int id;
-};
-
-static FakeHandle* acquireHandle(int id) {
-    std::cout << "acquire handle " << id << "\n";
-    return new FakeHandle{id};
-}
-
-static void releaseHandle(FakeHandle* h) {
-    std::cout << "release handle " << h->id << "\n";
-    delete h;
-}
-
 int main() {
-    std::unique_ptr<Task> t = std::make_unique<PrintTask>("Hello from Task");
-    t->execute();
+    // Task* badT = new PrintTask("Hello from badTask");
+    // badT->execute();
 
-    auto s1 = std::make_shared<PrintTask>("shared task");
-    std::shared_ptr<Task> s2 = s1;
-    s1->execute();
-    s2->execute();
-    std::cout << "use_count = " << s1.use_count() << "\n\n";
+    // std::shared_ptr<Task> t(new PrintTask("Hello from Task"));
+    // t->execute();
 
-    std::shared_ptr<FakeHandle> h(
-        acquireHandle(42),
-        [](FakeHandle* p) { releaseHandle(p); }
-    );
+    // std::unique_ptr<Task> t(new PrintTask("Hello from Task"));
+    // t->execute();
 
-    std::cout << "handle id = " << h->id << "\n";
+    // t = std::make_unique<PrintTask>("Hello from Task2");
+    // t->execute();
+
+    std::shared_ptr<Task> shp(new PrintTask("Hello from Task"));
+    // std::shared_ptr<Task> shp2 = shp;
+    shp->execute();
+
+    shp = std::make_shared<PrintTask>("Hello from Task2");
+    // shp2->execute();
+    shp->execute();
+
+    //            s3
+    //             |
+    // s1 -> [shared task] <- s2
+
+
 }

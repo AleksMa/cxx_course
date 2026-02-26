@@ -15,10 +15,12 @@ struct Serializer<int> {
     }
 };
 
-template <class T>
-struct Serializer<T*> {
-    static std::string dump(T* p) {
-        return p ? "ptr:non-null" : "ptr:null";
+template <class T2>
+struct Serializer<T2*> {
+    static std::string dump(T2* p) {
+        return p ?
+                std::string("ptr:non-null: " + Serializer<T2>::dump(*p)) :
+                "ptr:null";
     }
 };
 

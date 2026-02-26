@@ -1,12 +1,25 @@
 #include <iostream>
 
-struct A {
+class A {
+public:
+    void apply() {}
     int x = 1;
 };
 
-struct B : virtual A {};
-struct C : virtual A {};
-struct D : B, C {};
+class B : public virtual A {}; // x
+class C : public virtual A {}; // x
+class D : public B, public C {}; // x | x
+
+//.       A
+//.     // \\
+//. x-> B   C <-x
+//.      \ /
+//.       D  <-x        // B.x C.x
+
+// D: B, C
+// B: A, C: A
+
+// vi: D: B, C, A'
 
 int main() {
     D d;

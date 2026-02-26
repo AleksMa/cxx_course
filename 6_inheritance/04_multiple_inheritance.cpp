@@ -1,17 +1,22 @@
 #include <iostream>
 #include <string>
 
-struct Named {
+class Named {
+public:
     virtual ~Named() = default;
     virtual std::string name() const = 0;
 };
 
-struct Printable {
+class Printable {
+public:
     virtual ~Printable() = default;
     virtual void print() const = 0;
 };
 
-class Widget : public Named, public Printable {
+class Widget final
+: public Named
+, public Printable
+{
 public:
     std::string name() const override { return "Widget"; }
     void print() const override { std::cout << "I am a Widget\n"; }
@@ -29,7 +34,7 @@ int main() {
     Named* pn = &w;
     Printable* pp = &w;
 
-    pn->name();
+    std::cout << pn->name() << std::endl;
     pp->print();
 
     std::cout << "Done.\n";
