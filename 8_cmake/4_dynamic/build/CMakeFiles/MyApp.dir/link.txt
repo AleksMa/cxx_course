@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/MyApp.dir/main.cpp.o -o MyApp  -Wl,-rpath,/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/4_dynamic/build libMyMath.dylib

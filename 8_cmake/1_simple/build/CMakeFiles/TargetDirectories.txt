@@ -1,0 +1,3 @@
+/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/1_simple/build/CMakeFiles/MyApp.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/1_simple/build/CMakeFiles/edit_cache.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/1_simple/build/CMakeFiles/rebuild_cache.dir

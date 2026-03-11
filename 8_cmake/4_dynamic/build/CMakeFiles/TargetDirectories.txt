@@ -1,0 +1,4 @@
+/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/4_dynamic/build/CMakeFiles/MyApp.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/4_dynamic/build/CMakeFiles/MyMath.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/4_dynamic/build/CMakeFiles/edit_cache.dir
+/Users/a-mamaev/Work/cpp_hse/seminars/8_cmake/4_dynamic/build/CMakeFiles/rebuild_cache.dir

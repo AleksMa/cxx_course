@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -dynamiclib -Wl,-headerpad_max_install_names -o libMyMath.dylib -install_name @rpath/libMyMath.dylib CMakeFiles/MyMath.dir/my_math.cpp.o
